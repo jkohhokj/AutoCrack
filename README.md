@@ -23,6 +23,6 @@ AutoCrack currently supports the vigenere cipher and the caesar cipher.
 </list>
 <h2>How to use:</h2>
 <h3>Caesar (case-insensitive) :</h3>
-autoCaesar(message, keyword)
+autoCaesar(message, keyword, showTime=False)
 <h3>Vigenere (case-insensitive) :</h3>
-autoVigenere(message, keyword, min=2, max=5)
+autoVigenere(message, keyword, min=2, max=5, showTime=False)

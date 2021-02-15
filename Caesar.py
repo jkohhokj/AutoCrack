@@ -1,8 +1,7 @@
 import string
 from datetime import datetime
-def caesar(message,rot,showTime=False):
+def caesar(message,rot):
     original = list(string.ascii_lowercase+string.ascii_uppercase)
-    #print(original)
     new = []
     for x in range(26):
         if rot+x < 26:
@@ -24,11 +23,12 @@ def caesar(message,rot,showTime=False):
             decoded.append(char)
     # translate the message 
     return ''.join(decoded)
-def autoCaesar(message,keyword):
+def autoCaesar(message,keyword,showTime=False):
     old = datetime.now()
     for rot in range(26):
         encoded = caesar(keyword,rot)
         if encoded in message:
+            print(encoded, " in ", message)
             print(caesar(message,26-rot))
             if showTime:
                 print(datetime.now()-old)
